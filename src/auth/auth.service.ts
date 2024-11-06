@@ -21,7 +21,7 @@ export class AuthService extends PrismaClient implements OnModuleInit{
     const { password,email, ...userData } = registerAuthDto;
     const hashedPassword = await hash(password, 10);
 
-    // Crear usuario con datos compatibles con el tipo de Prisma
+
     return this.user.create({
       data: {
         ...userData,
