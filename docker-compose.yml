@@ -1,0 +1,13 @@
+services:
+  orders-db:
+    container_name: gestion_usuarios_database
+    image: postgres:16.2
+    restart: always #cuando encienda docker se levanta el contenedor
+    volumes: #esto es para cuando yo frene el contenedor no se borre los datos
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 #puerto pc / puerto docker
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345678g
+      - POSTGRES_DB=usersdb
