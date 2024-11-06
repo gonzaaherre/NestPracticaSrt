@@ -1,8 +1,8 @@
 import { HttpException, Injectable, Logger, NotFoundException, OnModuleInit } from '@nestjs/common';
-import { RegisterAuthDto } from './dto/register-auth.dto';
+import { RegisterAuthDto } from './dto/Register-auth.dto';
 import { hash,compare } from 'bcrypt';
 import { PrismaClient } from '@prisma/client';
-import { LoginAuthDto } from './dto/login-auth.dto';
+import { LoginAuthDto } from './dto/Login-auth.dto';
 import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
